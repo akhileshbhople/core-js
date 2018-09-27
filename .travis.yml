@@ -1,10 +1,13 @@
-os:
-  - linux-ppc64le
-  - linux
 language: node_js
 node_js:
   - '10'
   - '8'
   - '6'
+
+matrix:
+  include:
+  - os: linux-ppc64le
+    script: npm install
+  - os: linux
 
 sudo: false
